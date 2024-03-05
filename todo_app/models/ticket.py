@@ -6,7 +6,7 @@ class Tickets(models.Model):
 
     name = fields.Char()
     number = fields.Integer()
-    tag = fields.Binary()
+    tag = fields.Char()
     state = fields.Selection([
         ("new", "New"),
         ("doing", "Doing"),
