@@ -1,0 +1,14 @@
+<odoo>
+    <menuitem id="menu_library"
+              name="Library"
+              web_icon="library_app,static/description/icon.png"/>
+    <menuitem
+        id = "todo_root"
+        name = "Todo"
+    />
+    <menuitem
+        id = "ticket_meno"
+        name = "Ticket"
+        parent = "todo_root"
+    />
+</odoo>

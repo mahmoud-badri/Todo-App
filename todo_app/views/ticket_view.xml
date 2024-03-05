@@ -1,0 +1,65 @@
+<odoo>
+    <record id="todo_view_tree" model="ir.ui.view">
+        <field name="name"> todo tree </field>
+        <field name="model">todo</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="number" />
+                <field name="description" />
+                <field name="tag" />
+                <field name="file" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="todo_view_form" model="ir.ui.view">
+        <field name="name"> todo form </field>
+        <field name="model">todo</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="General Information">
+                            <field name="number" />
+                            <field name="description" />
+                        </group>
+                        <group string="Additional Information">
+                            <field name="tag" />
+                            <field name="file" />
+                            <field name="state" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="all_tickets_action" model="ir.actions.act_window" >
+        <field name="name"> All Tickets </field>
+        <field name="res_model">todo</field>
+    </record>
+        <record id="todo_view_search" model="ir.ui.view">
+        <field name="name"> todo search </field>
+        <field name="model">todo</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="state" />
+            </search>
+        </field>
+    </record>
+    <menuitem
+        id = "all_ticket"
+        name = "All Tickets"
+        parent = "ticket_meno"
+        action = "all_tickets_action"
+    />
+</odoo>
